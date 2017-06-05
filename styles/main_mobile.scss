@@ -1,0 +1,449 @@
+// init start
+*{
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    color: inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Athiti";
+    src: url('../fonts/Athiti-Regular.otf');
+}
+@font-face {
+    font-family: "AthitiSemi";
+    src: url('../fonts/Athiti-SemiBold.otf');
+}
+#navbar{
+    position: fixed;
+    background: white;
+    z-index: 55;
+    width: 100%;
+    font-family: Athiti;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    .logo-container{
+        z-index: 5;
+        a{
+            position: absolute;
+            top: 0px;
+            img{
+                display: block;
+                width: 100px;
+            }
+        }
+    }
+    .nav-ul{
+        display: none;
+        flex-wrap: wrap;
+        width: 50%;
+        justify-content: space-between;
+        position: absolute;
+        background: white;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        li{
+            width: 100%;
+            border-bottom: 1px solid #eee;
+        }
+        a{
+            padding: 15px 20px;
+            display: block;
+            color: #888;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+        a:hover{
+            color: #0c51a0;
+        }
+    }
+    .nav-ul.active{
+        display: flex;
+    }
+}
+
+.mobile-handle{
+    height: 40px;
+    width: 40px;
+    float: right;
+    padding: 10px 8px;
+    .mobile-lines{
+        border: 1px solid #333;
+        margin: 4px 0;
+        display: block;
+        position: relative;
+        top: 0;
+        transition: all .3s ease;
+    }
+}
+.mobile-handle.active{
+    #line1{
+        transform: rotateZ(45deg);
+        top: 6px
+    }
+    #line2{
+        opacity: 0;
+    }
+    #line3{
+        transform: rotateZ(-225deg);
+        top: -6px
+    }
+}
+.container{
+    width: 100vw;
+    margin: auto;
+    position: relative;
+    height: 100%;
+}
+
+.section-container{
+    position: relative;
+    .container{
+        min-height: 450px;
+        position: relative;
+    }
+    .img-container{
+        height: 250px;
+        width: 250px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -100px;
+        top: 70px;
+    }
+    .text-container{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-family: Athiti;
+        width: 85%;
+    }
+    .title{
+        font-size: 44px;
+        line-height: 45px;
+        color: white;
+    }
+}
+
+#idOne{
+    overflow-x: hidden;
+    background: #0c51a0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#093277+0,0c51a0+100 */
+    background: #093277; /* Old browsers */
+    background: -moz-linear-gradient(top, #093277 0%, #0c51a0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #093277 0%,#0c51a0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #093277 0%,#0c51a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093277', endColorstr='#0c51a0',GradientType=0 ); /* IE6-9 */
+    .img-container{
+        background-image: url(../img/products/img-1.png);
+    }
+    .img-top{
+        position: absolute;
+        left: 65%;
+        top: 5%;
+        width: 35%;
+    }
+}
+#idTwo{
+    overflow-x: hidden;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e440b+0,de7611+100 */
+    background: #8e440b; /* Old browsers */
+    background: -moz-linear-gradient(top, #8e440b 0%, #de7611 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8e440b 0%,#de7611 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #8e440b 0%,#de7611 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e440b', endColorstr='#de7611',GradientType=0 ); /* IE6-9 */
+    .img-container{
+        background-image: url(../img/products/img-2.png);
+    }
+    .img-top{
+        position: absolute;
+        left: 55%;
+        top: 5%;
+        width: 60%;
+    }
+}
+#idThree{
+    overflow-x: hidden;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#619612+0,9ccd17+100 */
+    background: #619612; /* Old browsers */
+    background: -moz-linear-gradient(top, #619612 0%, #9ccd17 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #619612 0%,#9ccd17 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #619612 0%,#9ccd17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#619612', endColorstr='#9ccd17',GradientType=0 ); /* IE6-9 */
+    .img-container{
+        background-image: url(../img/products/img-3.png);
+    }
+    .img-top{
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        width: 60%;
+    }
+}
+
+
+#parentContainer{
+    z-index: 5;
+    background: white;
+}
+#footer{
+    background: #0c51a0;
+    padding: 30px 0;
+    font-family: Athiti;
+    color: white;
+    text-align: center;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .flex-module{
+        width: 100%;
+        line-height: 18px;
+    }
+    .mobile-padding-top{
+        padding-top: 10px;
+    }
+    .mobile-padding-bot{
+        padding-bottom: 10px;
+    }
+}
+
+#indexSlide{
+    .slide-items{
+        min-height: 100vh;
+        background-position: center center;
+        position: relative;
+    }
+    #bg1{
+        background-image: url('../img/slide-bg.png');
+        background-size: cover;
+    }
+    #bg2{
+        background-image: url('../img/slide-bg.png');
+        background-size: cover;
+    }
+    .absolute-center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .text{
+        color: white;
+        font-size: 40px;
+        font-family: Athiti;
+        font-weight: bold;
+        width: 350px;
+        text-align: center;
+    }
+
+}
+
+#bottomBanner{
+    background-image: url(../img/bg.png);
+    background-size: 150vw;
+    background-position: top right;
+    background-repeat: no-repeat;
+    .container{
+        min-height: 480px;
+    }
+    .left-text{
+        position: absolute;
+        left: 50%;
+        transform: translateX( -50%);
+        bottom: 40px;
+        font-family: Athiti;
+        font-weight: bold;
+        width: 280px;
+        font-size: 32px;
+        text-align: center;
+        line-height: 35px;
+        color: #333;
+    }
+    .paragraph{
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 20px;
+        padding-top: 10px;
+    }
+    .border-button{
+        a{
+            padding: 5px 35px;
+        }
+    }
+}
+
+.border-button{
+    font-size: 15px;
+    background: #0c51a0;
+    font-weight: normal;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    a{
+        display: block;
+        padding: 7px 30px;
+    }
+}
+
+
+#aboutSlide{
+    padding-top: 45px;
+    .slide-items{
+        min-height: 80vh;
+        background-position: center center;
+        position: relative;
+    }
+    #bg3{
+        background-image: url('../img/bg2.png');
+        background-size: cover;
+    }
+    #bg4{
+        background-image: url('../img/bg2.png');
+        background-size: cover;
+    }
+    .absolute-center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .text{
+        color: white;
+        font-size: 40px;
+        font-family: Athiti;
+        font-weight: bold;
+        width: 350px;
+        text-align: center;
+    }
+}
+
+.w70{
+    width: 70%;
+}
+.w60{
+    width: 60%;
+}
+.w50{
+    width: 50%;
+}
+.w45{
+    width: 45%;
+}
+.w55{
+    width: 55%;
+}
+.w40{
+    width: 40%;
+}
+.w30{
+    width: 30%
+}
+.title{
+    font-family: AthitiSemi;
+    color: rgb(68, 68, 68);
+    margin: 30px 0 20px;
+}
+.paragraph{
+    font-family: Athiti;
+    color: rgb(90, 90, 90);
+    font-size: 14px;
+}
+#about1{
+    .container{
+        display: flex;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+}
+
+#visionMission{
+    text-align: center;
+    background: #0c51a0;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    .title{
+        color: white;
+        margin: 0;
+    }
+    .paragraph{
+        color: white;
+        width: 500px;
+        margin: auto;
+    }
+}
+.absolute-vertical{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#about2{
+    .container{
+        display: flex;
+    }
+    .title{
+        margin-bottom: 20px;
+    }
+    .paragraph{
+        margin-bottom: 100px;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+}
+
+#about3{
+    .container{
+        display: flex;
+    }
+    .title{
+        margin-bottom: 20px;
+    }
+    .paragraph{
+        margin-bottom: 100px;
+    }
+    img{
+        display: block;
+        margin: auto;
+    }
+    .w55{
+        position: relative;
+    }
+}
+
+#contactUs{
+    background: #0c51a0;
+    padding: 100px 0;
+    font-family: Athiti;
+    color: white;
+    .w50{
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .map{
+        height: 400px;
+        background: white;
+        width: 100%;
+    }
+}
