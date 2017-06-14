@@ -192,7 +192,7 @@
 }
 
 #indexSlide {
-  padding-top: 45px;
+  padding-top: 54px;
 }
 
 #indexSlide .slide-items {
@@ -356,7 +356,7 @@
 
 #about1 img {
   display: block;
-  margin: auto;
+  margin: 30px auto;
 }
 
 #visionMission {
@@ -401,12 +401,21 @@
   margin: auto;
 }
 
+#about2 .w55 {
+  position: relative;
+}
+
 #about3 .container {
   display: flex;
 }
 
 #about3 .title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+#about3 .title {
+  color: #0c51a0;
+  font-size: 20px;
 }
 
 #about3 .paragraph {
@@ -415,7 +424,6 @@
 
 #about3 img {
   display: block;
-  margin: auto;
 }
 
 #about3 .w55 {
@@ -423,19 +431,250 @@
 }
 
 #contactUs {
-  background: #0c51a0;
   padding: 100px 0;
   font-family: Athiti;
+}
+
+#contactUs .section-title {
+  background: #0c51a0;
   color: white;
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+#contactUs .section-title .caption {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#contactUs .container {
+  display: flex;
 }
 
 #contactUs .w50 {
   flex-wrap: wrap;
+  padding: 10px;
   display: flex;
+}
+
+#contactUs .w50 .w50 {
+  padding: 0 0 15px;
+  opacity: 0.8;
+  line-height: 18px;
+  font-size: 15px;
 }
 
 #contactUs .map {
   height: 400px;
-  background: white;
+  background: #eee;
   width: 100%;
+}
+
+#contactUs .form-group {
+  position: relative;
+  margin: 0px 0 15px;
+}
+
+#contactUs .full-input {
+  width: 100%;
+  background: #eee;
+  padding: 10px;
+  height: 45px;
+}
+
+#contactUs .abs-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  opacity: 0.5;
+  line-height: 15px;
+}
+
+#contactUs .tall {
+  height: 100px;
+  resize: none;
+}
+
+#contactUs form {
+  width: 100%;
+}
+
+#contactUs .rounded-btn {
+  background: #0c51a0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title-caption {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 30px 0;
+  font-family: Athiti;
+  font-weight: bold;
+}
+
+.title-caption .caption {
+  font-size: 14px;
+  font-weight: lighter;
+  width: 600px;
+  margin: auto;
+  opacity: 0.8;
+}
+
+#baksoSection {
+  padding-top: 54px;
+  background: #0c51a0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#093277+0,0c51a0+100 */
+  background: #093277;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #093277 0%, #0c51a0 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #093277 0%, #0c51a0 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #093277 0%, #0c51a0 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093277', endColorstr='#0c51a0',GradientType=0 );
+  /* IE6-9 */
+}
+
+#sosisSection {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e440b+0,de7611+100 */
+  background: #8e440b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8e440b 0%, #de7611 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #8e440b 0%, #de7611 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #8e440b 0%, #de7611 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e440b', endColorstr='#de7611',GradientType=0 );
+  /* IE6-9 */
+}
+
+#basisSection {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#619612+0,9ccd17+100 */
+  background: #619612;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #619612 0%, #9ccd17 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #619612 0%, #9ccd17 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #619612 0%, #9ccd17 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#619612', endColorstr='#9ccd17',GradientType=0 );
+  /* IE6-9 */
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1000px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.product-container:after {
+  content: "";
+  width: 30%;
+}
+
+.product-module {
+  width: 30%;
+  padding: 0 20px;
+  color: white;
+  font-family: Athiti;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.product-module img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.product-module .product-caption {
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+#productDetail {
+  min-height: 90vh;
+  padding: 14% 0;
+  font-family: Athiti;
+  color: white;
+  text-align: center;
+}
+
+#productDetail .product-name {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#productDetail .paragraph {
+  color: white;
+  opacity: 0.87;
+}
+
+#productDetail .container {
+  display: flex;
+}
+
+#productDetail .summary {
+  margin-top: 30px;
+}
+
+#productDetail .desc-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 0 50px;
+}
+
+#productDetail .desc-flex .flex-title {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+#productDetail .desc-flex .w30 {
+  font-size: 35px;
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+  padding: 0px 10px;
+}
+
+#productDetail .desc-flex .w30 .abs-top {
+  position: absolute;
+  top: 10px;
+  font-size: 15px;
+  right: 10px;
+  font-weight: lighter;
+}
+
+#productDetail .desc-flex .w30 .bottom {
+  font-size: 15px;
+  border-top: 1px solid white;
+  font-weight: lighter;
+}
+
+.orange {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e440b+0,de7611+100 */
+  background: #8e440b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8e440b 0%, #de7611 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #8e440b 0%, #de7611 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #8e440b 0%, #de7611 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e440b', endColorstr='#de7611',GradientType=0 );
+  /* IE6-9 */
 }
