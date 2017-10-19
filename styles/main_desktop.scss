@@ -24,6 +24,7 @@
     z-index: 55;
     width: 100%;
     font-family: Athiti;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1);
     .container{
         display: flex;
         justify-content: space-between;
@@ -42,6 +43,48 @@
         display: flex;
         width: 50%;
         justify-content: space-between;
+        align-items: center;
+        li{
+            color: #888;
+            position: relative;
+            .line{
+                width: 0px;
+                height: 2px;
+                background: #0c51a0;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: all .5s ease;
+            }
+        }
+        li:after{
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0c51a0;
+            width: 10px;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        li:hover:after{
+            width: 100%;
+            opacity: 1;
+        }
+        li:hover{
+            .line{
+                width: 100%;
+            }
+        }
+        li.active{
+            color: #0c51a0;
+            a{
+                color: #0c51a0;
+            }
+        }
         a{
             padding: 15px 0;
             display: block;
@@ -120,9 +163,9 @@
     }
     .img-top{
         position: absolute;
-        right: 13%;
+        right: 26%;
         top: 15%;
-        width: 280px;
+        width: 13vw;
     }
 }
 #idThree{
@@ -143,33 +186,73 @@
     }
 }
 
-
+.product-subtitle {
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 1.3vw;
+    padding: 100px 31vw 50px;
+    font-family: Athiti;
+    line-height: 2vw;
+    background: #10427B;
+}
 #parentContainer{
     z-index: 5;
-    margin-bottom: 85px;
+    margin-bottom: 7vh;
     background: white;
+    background: #0c51a0;
+    min-height: 93vh;
 }
 #footer{
-    background: #0c51a0;
-    padding: 30px 0;
+    background: #10427B;
+    padding: 2.5vh 0;
     font-family: Athiti;
     color: white;
     position: fixed;
     width: 100%;
     z-index: -5;
     bottom: 0;
+    height: 7vh;
+    font-size: 14px;
     .container{
         display: flex;
         justify-content: space-between;
+    }
+    .flex-module{
+        display: flex;
+        align-items: center;
+        a{
+            padding: 0 0px 0 10px;
+            display: block;
+            img{
+                width: 20px;
+            }
+        }
     }
 }
 
 #indexSlide{
     padding-top: 54px;
     .slide-items{
-        min-height: 80vh;
+        min-height: 100vh;
         background-position: center center;
         position: relative;
+    }
+    .border-button{
+        font-size: 15px;
+        background: #0c51a0;
+        font-weight: normal;
+        border-radius: 30px;
+        display: block;
+        margin-top: 10px;
+        color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        line-height: initial;
+        text-shadow: none;
+        width: 200px;
+        margin: 20px auto;
+        position: relative;
+        top: 30px;
     }
     #bg1{
         background-image: url('../img/slide-bg.png');
@@ -181,17 +264,25 @@
     }
     .absolute-center{
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .5s ease .5s;
+    }
+    .absolute-center.active{
+        opacity: 1;
+        top: 50%;
     }
     .text{
         color: white;
-        font-size: 40px;
+        font-size: 80px;
         font-family: Athiti;
         font-weight: bold;
-        width: 350px;
+        width: 630px;
         text-align: center;
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+        line-height: 80px;
     }
 
 }
@@ -225,7 +316,6 @@
         }
     }
 }
-
 .border-button{
     font-size: 15px;
     background: #0c51a0;
@@ -235,12 +325,13 @@
     margin-top: 10px;
     color: rgba(255,255,255,0.8);
     text-transform: uppercase;
+    line-height: initial;
+    text-shadow: none;
     a{
         display: block;
         padding: 7px 30px;
     }
 }
-
 
 #aboutSlide{
     padding-top: 45px;
@@ -323,7 +414,7 @@
     position: relative;
     min-height: 40vh;
     display: flex;
-    background-image: url(../img/left-bg.png);
+    // background-image: url(../img/left-bg.png);
     background-repeat: no-repeat;
     // margin: 100px 0;
     color: white;
@@ -351,6 +442,10 @@
         width: 50%;
         text-align: center;
         position: relative;
+        img{
+            display: block;
+            width: 100%;
+        }
     }
 }
 .absolute-vertical{
@@ -402,10 +497,10 @@
 }
 
 #contactUs{
-    // background: #0c51a0;
     padding: 50px 0;
     font-family: Athiti;
-    // color: white;
+    background: white;
+    min-height: 93vh;
     .section-title{
         background: #0c51a0;
         color: white;
@@ -469,7 +564,8 @@
         background: #0c51a0;
         color: white;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 0px;
+        width: 100%;
     }
 }
 .title-caption{
@@ -515,7 +611,9 @@
     background: linear-gradient(to bottom, #619612 0%,#9ccd17 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#619612', endColorstr='#9ccd17',GradientType=0 ); /* IE6-9 */
 }
-
+.joheight{
+    opacity: 0;
+}
 .product-container{
     display: flex;
     flex-wrap: wrap;
@@ -535,9 +633,13 @@
     font-family: Athiti;
     text-align: center;
     margin: 20px 0;
+    position: relative;
+    top: 30px;
+    opacity: 0;
     cursor: pointer;
     img{
-        width: 90%;
+        min-height: 200px;
+        max-height: 200px;
         display: block;
         margin: auto;
     }
@@ -546,10 +648,16 @@
         margin-top: 10px;
     }
 }
-
+.product-module.active{
+    top: 0;
+    opacity: 1;
+}
+#keunggulanEssemfood, #Intro{
+    background: white;
+}
 #productDetail{
-    min-height: 90vh;
-    padding: 14% 0;
+    // max-height: 90vh;
+    padding: 21vh 0;
     font-family: Athiti;
     color: white;
     text-align: center;
@@ -598,6 +706,23 @@
         }
     }
 }
+.product-slider{
+    padding-right: 50px;
+    img{
+        outline: none;
+        // width: 450px;
+        margin: 0 -100px;
+        transform: scale(0.4) translateY(0px);
+        transition: all .5s ease;
+        position: relative;
+        cursor: pointer;
+    }
+    img.slick-current{
+        transform: scale(1);
+        z-index: 5;
+        opacity: 1;
+    }
+}
 
 .orange{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e440b+0,de7611+100 */
@@ -633,9 +758,10 @@
 
 #keunggulanEssemfood{
     font-family: Athiti;
+    padding: 40px 0;
     .blue-title{
         text-align: center;
-        margin: 40px 0;
+        padding: 0px 0;
         font-weight: bold;
         font-size: 18px;
     }
@@ -650,6 +776,10 @@
             padding: 20px 30px;
             align-items: baseline;
             height: 220px;
+            img {
+                height: 70px;
+                margin-bottom: 10px;
+            }
         }
     }
     .bold-subcaption{
@@ -684,8 +814,81 @@
     }
     .paragraph{
         font-size: 14px;
-        color: #eee;
+        color: #111;
         margin-bottom: 30px;
     }
+}
 
+select{
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+}
+option{
+    padding:5px 0;
+}
+
+
+
+.li-lang{
+    height: 54px;
+    position: relative;
+    padding: 15px;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    .div-lang{
+        display: none;
+        position: absolute;
+        background: white;
+        padding: 20px 20px 10px;
+        left: -5px;
+    }
+    a{
+        padding: 0 !important;
+    }
+}
+.li-lang:hover{
+    .div-lang{
+        display: block;
+    }
+}
+.detail-nav-anchor {
+    position: absolute;
+    top: 35%;
+    font-family: Athiti;
+    height: 30px;
+    width: 30px;
+    border: 1px solid white;
+    transform: rotateZ(45deg);
+    color: transparent;
+}
+#anchor-next{
+    right: -45px;
+    border-left: 0;
+    border-bottom: 0;
+}
+#anchor-prev{
+    left: -45px;
+    border-top: 0;
+    border-right: 0;
+}
+.product-gallery-container{
+    padding: 0 20%;
+    margin: 0px auto;
+    .slick-track{
+        margin: auto;
+    }
+}
+.product-gallery-image{
+    padding: 8px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.product-big-image{
+    min-height: 400px;
 }

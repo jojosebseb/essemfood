@@ -56,8 +56,32 @@
             width: 100%;
             border-bottom: 1px solid #eee;
         }
+        .active-lang{
+            color: #0c51a0;
+        }
+        li.li-lang{
+            display: none;
+            // padding: 10px 20px;
+            // display: block;
+            // color: #888;
+            // letter-spacing: 1px;
+            // font-weight: bold;
+            // text-transform: uppercase;
+            // font-size: 13px;
+        }
+        .div-lang-choosen{
+            display: none;
+        }
+        .div-lang{
+            display: flex;
+            padding-left: 10px;
+            a{
+                padding: 10px;
+            }
+        }
         a{
             padding: 10px 20px;
+
             display: block;
             color: #888;
             letter-spacing: 1px;
@@ -71,6 +95,12 @@
     }
     .nav-ul.active{
         display: flex;
+    }
+    li.active{
+        color: #0c51a0;
+        a{
+            color: #0c51a0;
+        }
     }
 }
 
@@ -107,7 +137,14 @@
     position: relative;
     height: 100%;
 }
-
+.product-subtitle{
+    padding-top: 54px;
+    padding: 80px 40px 30px;
+    text-align: center;
+    background: #10427B;
+    color: white;
+    font-family: Athiti;
+}
 .section-container{
     position: relative;
     .container{
@@ -120,8 +157,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        left: -100px;
-        top: 70px;
+        left: 0px;
+        top: 50px;
     }
     .text-container{
         position: absolute;
@@ -152,10 +189,11 @@
         background-image: url(../img/products/img-1.png);
     }
     .img-top{
+        left: 60%;
+        top: 26%;
+        z-index: 6;
+        width: 33%;
         position: absolute;
-        left: 65%;
-        top: 5%;
-        width: 35%;
     }
 }
 #idTwo{
@@ -171,9 +209,10 @@
     }
     .img-top{
         position: absolute;
-        left: 55%;
-        top: 5%;
-        width: 60%;
+        left: 53%;
+        bottom: 43%;
+        width: 40%;
+        z-index: 6;
     }
 }
 #idThree{
@@ -189,9 +228,10 @@
     }
     .img-top{
         position: absolute;
-        left: 50%;
-        top: 15%;
+        left: 38%;
+        top: 31%;
         width: 60%;
+        z-index: 6;
     }
 }
 
@@ -201,11 +241,12 @@
     background: white;
 }
 #footer{
-    background: #0c51a0;
+    background: #10427B;
     padding: 30px 0;
     font-family: Athiti;
     color: white;
     text-align: center;
+    // height: 10vh;
     .container{
         display: flex;
         justify-content: space-between;
@@ -215,6 +256,17 @@
         width: 100%;
         line-height: 18px;
     }
+    .flex-module{
+        display: flex;
+        align-items: center;
+        a{
+            padding: 0 0px 0 10px;
+            display: block;
+            img{
+                width: 20px;
+            }
+        }
+    }
     .mobile-padding-top{
         padding-top: 10px;
     }
@@ -222,7 +274,6 @@
         padding-bottom: 10px;
     }
 }
-
 #indexSlide{
     .slide-items{
         min-height: 100vh;
@@ -249,37 +300,51 @@
         font-family: Athiti;
         font-weight: bold;
         width: 350px;
+        text-shadow: 4px 4px 6px rgba(0,0,0,0.5);
         text-align: center;
+        line-height: 48px;
+
     }
 
 }
-
+#bottomBanner:after{
+    content: "";
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 #bottomBanner{
     background-image: url(../img/bg.png);
     background-size: 150vw;
     background-position: top right;
     background-repeat: no-repeat;
+    position: relative;
     .container{
         min-height: 480px;
+        z-index: 5;
     }
     .left-text{
         position: absolute;
         left: 50%;
         transform: translateX( -50%);
-        bottom: 40px;
+        top: 100px;
         font-family: Athiti;
         font-weight: bold;
         width: 280px;
         font-size: 32px;
         text-align: center;
         line-height: 35px;
-        color: #333;
+        color: #eee;
     }
     .paragraph{
         font-size: 16px;
         font-weight: normal;
         line-height: 20px;
         padding-top: 10px;
+        color: #eee;
     }
     .border-button{
         a{
@@ -297,6 +362,8 @@
     margin-top: 10px;
     color: rgba(255,255,255,0.8);
     text-transform: uppercase;
+    line-height: initial;
+    text-shadow: none;
     a{
         display: block;
         padding: 7px 30px;
@@ -307,7 +374,7 @@
 #aboutSlide{
     padding-top: 45px;
     .slide-items{
-        min-height: 80vh;
+        min-height: 40vh;
         background-position: center center;
         position: relative;
     }
@@ -390,13 +457,10 @@
     min-height: 40vh;
     display: flex;
     flex-wrap: wrap;
-    background-image: url(../img/left-bg.png);
     background-repeat: no-repeat;
-    // margin: 100px 0;
     color: white;
     font-family: Athiti;
     line-height: 18px;
-    padding: 35px 15px;
     .divider{
         margin: 20px auto;
         border-bottom: 1px solid white;
@@ -420,13 +484,24 @@
         width: 100%;
         text-align: center;
         position: relative;
+        min-height: 245px;
+        overflow: hide;
+        overflow: hidden;
+        img{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+        }
     }
 }
-.absolute-vertical{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
+// .absolute-vertical{
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
 // .absolute-vertical{
 //     position: absolute;
 //     top: 50%;
@@ -551,6 +626,7 @@
     padding: 30px 0;
     font-family: Athiti;
     font-weight: bold;
+    display: none;
     .caption{
         font-size: 14px;
         font-weight: lighter;
@@ -560,7 +636,7 @@
     }
 }
 #baksoSection{
-    padding-top: 54px;
+    // padding-top: 54px;
     background: #0c51a0;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#093277+0,0c51a0+100 */
     background: #093277; /* Old browsers */
@@ -631,6 +707,7 @@
     }
     img{
         width: 80%;
+        margin: auto;
     }
     .paragraph{
         color: white;
@@ -734,6 +811,10 @@
             padding: 10px 15px;
             align-items: baseline;
             // height: 220px;
+            img {
+                height: 60px;
+                margin-bottom: 10px;
+            }
         }
     }
     .bold-subcaption{
@@ -771,8 +852,51 @@
     }
     .paragraph{
         font-size: 14px;
-        color: #eee;
+        color: #111;
         margin-bottom: 30px;
     }
 
+}
+
+.detail-nav-anchor {
+    position: absolute;
+    top: 20%;
+    font-family: Athiti;
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    transform: rotateZ(45deg);
+    color: transparent;
+}
+#anchor-next{
+    right: 15px;
+    border-left: 0;
+    border-bottom: 0;
+}
+#anchor-prev{
+    left: 15px;
+    border-top: 0;
+    border-right: 0;
+}
+.product-gallery-container{
+    // width: 80%;
+    margin: 20px auto;
+    .slick-track{
+        margin: auto;
+    }
+}
+.product-gallery-image{
+    padding: 2px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        display: block;
+    }
+}
+
+.product-big-image{
+    min-height: 300px;
+}
+.detail-nav-container{
+    display: none;
 }

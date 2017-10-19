@@ -13,8 +13,8 @@
     <!-- cloud css end-->
 
     <!-- local css start -->
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1050px)" href="styles/main_desktop.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1049px)" href="styles/main_mobile.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1050px)" href="styles/main_desktop.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1049px)" href="styles/main_mobile.css" />
     <!-- local css end -->
 </head>
 <body>
@@ -27,12 +27,19 @@
                 </a>
             </div>
             <ul class="nav-ul">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produk</a></li>
-                <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">Distribusi</a></li>
-                <li><a href="#">Hubungi Kami</a></li>
+                <li><a href="#">Home</a> <div class="line"></div></li>
+                <li><a href="#">Produk</a> <div class="line"></div></li>
+                <li><a href="#">Tentang Kami</a> <div class="line"></div></li>
+                <li><a href="#">Distribusi</a> <div class="line"></div></li>
+                <li><a href="#">Hubungi Kami</a> <div class="line"></div></li>
+                <li>
+                    <select name="language">
+                        <option value="En">EN</option>
+                        <option value="Id" selected>ID</option>
+                    </select>
+                </li>
             </ul>
+
         </div>
         <div class="mobile-handle">
             <div class="mobile-lines" id="line1"></div>
@@ -45,10 +52,12 @@
 
         <div class="section-container orange" id="productDetail">
             <div class="container">
-                <div class="w50">
+                <div class="w50 product-slider">
+                    <img src="img/products/img-1.png" alt="">
+                    <img src="img/products/img-1.png" alt="">
                     <img src="img/products/img-1.png" alt="">
                 </div>
-                <div class="w50">
+                    <div class="w50">
                     <div class="product-name">
                         Baso Sapi Halus Super Spesial
                     </div>
