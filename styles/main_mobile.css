@@ -312,6 +312,7 @@
 
 #footer .flex-module a img {
   width: 20px;
+  display: block;
 }
 
 #footer .mobile-padding-top {
