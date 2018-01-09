@@ -236,6 +236,10 @@
   min-height: 93vh;
 }
 
+#parentContainer.white {
+  background: white;
+}
+
 #footer {
   background: #10427B;
   padding: 2.5vh 0;
@@ -1049,4 +1053,341 @@ option {
 
 .product-big-image {
   min-height: 400px;
+}
+
+.carapenyajian {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carapenyajian img {
+  display: block;
+  margin: auto;
+}
+
+.carapenyajian .carapenyajian-title {
+  width: 100%;
+}
+
+.carapenyajian .carapenyajian-module {
+  width: 25%;
+  text-align: center;
+  margin: 30px 0 50px;
+}
+
+#resepBanner {
+  padding-top: 54px;
+  text-align: center;
+  font-family: "Athiti";
+  line-height: 1.2;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3e9da+0,fffcf9+100 */
+  background: #f3e9da;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f3e9da 0%, #fffcf9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f3e9da 0%, #fffcf9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f3e9da 0%, #fffcf9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e9da', endColorstr='#fffcf9',GradientType=0 );
+  /* IE6-9 */
+}
+
+#resepBanner .container {
+  padding: 50px 0 100px;
+}
+
+#resepBanner .top {
+  color: #c44c3f;
+  font-size: 13px;
+}
+
+#resepBanner .middle {
+  color: #43250d;
+  font-size: 30px;
+  font-family: "AthitiSemi";
+}
+
+#resepBanner .bottom {
+  color: #000000;
+  font-size: 15px;
+}
+
+#resepBanner .table {
+  position: relative;
+  background-image: url("../img/table.png");
+}
+
+#resepBanner .table .food-container {
+  min-height: 14vw;
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+#resepBanner .table img {
+  display: block;
+}
+
+#resepBanner .table .food {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all .3s ease;
+}
+
+#resepBanner .table .food.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#resepBanner .table #food1 {
+  left: -10%;
+}
+
+#resepBanner .table #food2 {
+  left: 18%;
+  top: -15%;
+}
+
+#resepBanner .table #food3 {
+  left: 48%;
+  top: 10%;
+}
+
+#resepBanner .table #food4 {
+  right: -10%;
+  top: -18%;
+}
+
+#resepContainer {
+  font-family: "Athiti";
+  padding-top: 50px;
+}
+
+#resepContainer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+#resepContainer .container:after {
+  content: "";
+  display: block;
+  width: 31%;
+}
+
+#resepContainer .resep-module {
+  width: 31%;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+#resepContainer .resep-module img {
+  width: 100%;
+  display: block;
+}
+
+#resepContainer .resep-module .resep-link {
+  background: #cebd2b;
+  color: white;
+  width: 70%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: -35px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "AthitiSemi";
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+#resepContainer .resep-module.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+#resepContainer .resep-module:hover .resep-link {
+  opacity: 1;
+  bottom: -25px;
+}
+
+#resepContainer .resep-module:hover .resep-link:hover {
+  background: #10427B;
+}
+
+#resepContainer .resep-desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+
+#resepContainer .resep-desc .resep-title {
+  width: 100%;
+  font-family: "AthitiSemi";
+  color: #10427B;
+  font-size: 18px;
+}
+
+#resepContainer .resep-desc .group {
+  width: 90px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resepContainer .resep-desc .group img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: 5px;
+}
+
+#resepDetailBanner {
+  background-image: url(../img/banner.png);
+  padding-top: 54px;
+  background-repeat: no-repeat;
+  background-position: center 54px;
+  background-size: contain;
+  font-family: 'Athiti';
+  position: relative;
+}
+
+#resepDetailBanner .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+19,0.66+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(207, 207, 207, 0) 19%, rgba(0, 0, 0, 0.66) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(207, 207, 207, 0) 19%, rgba(0, 0, 0, 0.66) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(207, 207, 207, 0) 19%, rgba(0, 0, 0, 0.66) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#a8000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+#resepDetailBanner .container {
+  min-height: 22vw;
+  position: relative;
+}
+
+#resepDetailBanner .container .flex {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  left: 0;
+  align-items: center;
+}
+
+#resepDetailBanner .container .resep-title {
+  font-family: 'AthitiSemi';
+  font-size: 24px;
+}
+
+#resepDetailBanner .container .back-btn {
+  background: white;
+  color: #10427B;
+  padding: 8px 25px 8px 50px;
+  border-radius: 20px;
+  font-family: 'AthitiSemi';
+}
+
+#resepDetailBanner .container .resep-detail {
+  display: flex;
+}
+
+#resepDetailBanner .container .resep-detail .group {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+#resepDetailBanner .container .resep-detail .group img {
+  filter: invert(1);
+  margin-right: 5px;
+}
+
+#resepDetailList {
+  padding: 50px 0;
+}
+
+#resepDetailList .resep-parent {
+  width: 70%;
+  margin: auto;
+  font-family: Athiti;
+  margin-bottom: 30px;
+}
+
+#resepDetailList .resep-parent .title {
+  font-family: 'AthitiSemi';
+  font-size: 20px;
+  color: #10427B;
+}
+
+#resepDetailList .resep-parent .resep-list {
+  font-family: 'AthitiSemi';
+  opacity: 0.8;
+  background-image: linear-gradient(to right, black 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 7px 1px;
+  background-repeat: repeat-x;
+  padding: 8px;
+  padding-right: 20%;
+  margin-left: -8px;
+  line-height: 1.4;
+}
+
+#resepDetailList .flex-parent {
+  display: flex;
+}
+
+#resepDetailList .flex-parent .share-module {
+  display: block;
+  text-align: center;
+  background: #eee;
+  margin-right: 8px;
+  border-radius: 3px;
+  color: white;
+}
+
+#resepDetailList .flex-parent .share-module img {
+  display: block;
+}
+
+#resepDetailList .flex-parent #shareFb {
+  background: #395aa1;
+}
+
+#resepDetailList .flex-parent #shareGm {
+  background: #e04b37;
+}
+
+#resepDetailList .flex-parent #shareWa {
+  background: #71c16a;
+}
+
+#resepDetailList .flex-parent #shareEmail {
+  background: #6acdec;
 }

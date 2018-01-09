@@ -259,6 +259,8 @@
     .flex-module{
         display: flex;
         align-items: center;
+        justify-content: center;
+        margin: 3px 0;
         a{
             padding: 0 0px 0 10px;
             display: block;
@@ -786,6 +788,7 @@
         width: 100%;
         display: block;
         padding: 10px;
+        margin: auto;
     }
     .paragraph{
         // padding: 30px 130px;
@@ -900,4 +903,151 @@
 }
 .detail-nav-container{
     display: none;
+}
+
+
+#resepBanner{
+    padding-top: 54px;
+    text-align: center;
+    font-family: "Athiti";
+    line-height: 1.2;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3e9da+0,fffcf9+100 */
+    background: rgb(243,233,218); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(243,233,218,1) 0%, rgba(255,252,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(243,233,218,1) 0%,rgba(255,252,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(243,233,218,1) 0%,rgba(255,252,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e9da', endColorstr='#fffcf9',GradientType=0 ); /* IE6-9 */
+    .container{
+        padding: 30px 0 50px;
+        min-height: 0;
+    }
+    .top{
+        color: #c44c3f;
+        font-size: 13px;
+    }
+    .middle{
+        color: #43250d;
+        font-size: 30px;
+        font-family: "AthitiSemi";
+    }
+    .bottom{
+        color: #000000;
+        font-size: 15px;
+    }
+    .table{
+        position: relative;
+        background-image: url('../img/table.png');
+        background-size: contain;
+        .food-container{
+            min-height: 14vw;
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+        img{
+            display: block;
+        }
+        .food{
+            position: absolute;
+            // transform: scale(0.85)
+            max-width: 100px;
+            opacity: 0;
+        }
+        #food1{
+            left: -10%;
+        }
+        #food2{
+            left: 18%;
+            top: -15%;
+
+        }
+        #food3{
+            left: 48%;
+            top: 10%;
+        }
+        #food4{
+            right: -0%;
+            top: -18%;
+        }
+    }
+}
+#resepContainer{
+    font-family: "Athiti";
+    padding-top: 50px;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        padding: 0 20px;
+
+    }
+    .container:after{
+        content: "";
+        display: block;
+        width: 31%;
+    }
+    .resep-module{
+        width: 100%;
+        text-align: center;
+        background: white;
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+        position: relative;
+        margin-bottom: 60px;
+        img{
+            width: 100%;
+            display: block;
+        }
+        .resep-link{
+            background: #cebd2b;
+            color: white;
+            width: 70%;
+            margin: auto;
+            display: block;
+            position: absolute;
+            bottom: -35px;
+            height: 44px;
+            line-height: 44px;
+            border-radius: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: "AthitiSemi";
+            opacity: 0;
+            transition: all .3s ease;
+        }
+    }
+    .resep-module:hover{
+        .resep-link{
+            opacity: 1;
+            bottom: -25px;
+        }
+        .resep-link:hover{
+            background: #10427B;
+        }
+    }
+    .resep-desc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 35px;
+        .resep-title{
+            width: 100%;
+            font-family: "AthitiSemi";
+            color: #10427B;
+            font-size: 18px;
+        }
+        .group{
+            width: 90px;
+            padding: 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                display: inline-block;
+                width: auto;
+                height: auto;
+                margin-right: 5px;
+            }
+        }
+    }
 }

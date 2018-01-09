@@ -41,4 +41,23 @@ $('.product-container .product-module').each(function(i){
     $(this).css({
         transition: 'all 0.5s ease '+i/5+'s'
     });
-})
+});
+
+
+
+function food(){
+    $('.food').each(function(i){
+        $(this).css({
+            transition: 'all 0.5s ease '+i/10+'s'
+        });
+        $(this).addClass('active');
+    });
+    $('.resep-module').each(function(i){
+        $(this).css({
+            transition: 'all 0.5s ease '+i/10+'s'
+        });
+        $(this).addClass('active');
+    });
+}
+food();
+// setTimeout(food(), 1000);

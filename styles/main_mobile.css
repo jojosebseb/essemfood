@@ -303,6 +303,8 @@
 #footer .flex-module {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 3px 0;
 }
 
 #footer .flex-module a {
@@ -898,6 +900,7 @@
   width: 100%;
   display: block;
   padding: 10px;
+  margin: auto;
 }
 
 #Intro .paragraph {
@@ -1021,4 +1024,174 @@
 
 .detail-nav-container {
   display: none;
+}
+
+#resepBanner {
+  padding-top: 54px;
+  text-align: center;
+  font-family: "Athiti";
+  line-height: 1.2;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3e9da+0,fffcf9+100 */
+  background: #f3e9da;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f3e9da 0%, #fffcf9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f3e9da 0%, #fffcf9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f3e9da 0%, #fffcf9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e9da', endColorstr='#fffcf9',GradientType=0 );
+  /* IE6-9 */
+}
+
+#resepBanner .container {
+  padding: 30px 0 50px;
+  min-height: 0;
+}
+
+#resepBanner .top {
+  color: #c44c3f;
+  font-size: 13px;
+}
+
+#resepBanner .middle {
+  color: #43250d;
+  font-size: 30px;
+  font-family: "AthitiSemi";
+}
+
+#resepBanner .bottom {
+  color: #000000;
+  font-size: 15px;
+}
+
+#resepBanner .table {
+  position: relative;
+  background-image: url("../img/table.png");
+  background-size: contain;
+}
+
+#resepBanner .table .food-container {
+  min-height: 14vw;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+#resepBanner .table img {
+  display: block;
+}
+
+#resepBanner .table .food {
+  position: absolute;
+  max-width: 100px;
+  opacity: 0;
+}
+
+#resepBanner .table #food1 {
+  left: -10%;
+}
+
+#resepBanner .table #food2 {
+  left: 18%;
+  top: -15%;
+}
+
+#resepBanner .table #food3 {
+  left: 48%;
+  top: 10%;
+}
+
+#resepBanner .table #food4 {
+  right: -0%;
+  top: -18%;
+}
+
+#resepContainer {
+  font-family: "Athiti";
+  padding-top: 50px;
+}
+
+#resepContainer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  padding: 0 20px;
+}
+
+#resepContainer .container:after {
+  content: "";
+  display: block;
+  width: 31%;
+}
+
+#resepContainer .resep-module {
+  width: 100%;
+  text-align: center;
+  background: white;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 60px;
+}
+
+#resepContainer .resep-module img {
+  width: 100%;
+  display: block;
+}
+
+#resepContainer .resep-module .resep-link {
+  background: #cebd2b;
+  color: white;
+  width: 70%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  bottom: -35px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "AthitiSemi";
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+#resepContainer .resep-module:hover .resep-link {
+  opacity: 1;
+  bottom: -25px;
+}
+
+#resepContainer .resep-module:hover .resep-link:hover {
+  background: #10427B;
+}
+
+#resepContainer .resep-desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+
+#resepContainer .resep-desc .resep-title {
+  width: 100%;
+  font-family: "AthitiSemi";
+  color: #10427B;
+  font-size: 18px;
+}
+
+#resepContainer .resep-desc .group {
+  width: 90px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resepContainer .resep-desc .group img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: 5px;
 }
